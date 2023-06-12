@@ -33,6 +33,16 @@ router.post("/register",body("email").isEmail().notEmpty().withMessage("it takes
         return res.status(400).send("error occurred ")
     }
 })
+// router.get("/register",async (req, res)=>{
+//     try{
+//         let employee =await Employee.find().lean().exec()
+//         return res.status(200).send(employee)
+
+//     }
+//     catch(err){
+//         return res.send("error occurred ")
+//     }
+// })
 router.post("/login",body("email").isEmail().notEmpty(),async (req,res)=>{
 
     try{
