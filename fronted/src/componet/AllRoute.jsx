@@ -10,6 +10,8 @@ import { EmployeeLogin } from '../Employee/EmployeeLogin'
 import { EmployeeRegister } from '../Employee/EmployeeRegister'
 import { EmployeeList } from '../Employee/EmployeeList'
 import { EmployeeAuth } from './EmployeeAuth'
+import NotFound from './NotFound'
+import { Home } from '../Home'
 
 export const AllRoute = () => {
   return (
@@ -23,6 +25,8 @@ export const AllRoute = () => {
         <Route path='/employeelogin' element={<EmployeeLogin/>}></Route>
         <Route path='/employeeregister' element={<EmployeeRegister/>}></Route>
         <Route path='/employeelist' element={<EmployeeAuth><EmployeeList/></EmployeeAuth>}></Route>
+        <Route path='/*' element={<NotFound/>}></Route>
+        <Route path='/' element={<Home/>}></Route>
         
     </Routes>
     </>

@@ -8,12 +8,12 @@ const authorize=require("..//middleware/authroize")
 router.post("",authentication,authorize(["admin"]),async (req,res)=>{
     try{
         let task=await Task.create(req.body)
-        console.log(task)
+        
         return res.status(200).send(task)
 
     }
     catch(err){
-        console.log(err)
+        
         return res.status(400).send("error occurred")
     }
 })

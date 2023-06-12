@@ -11,8 +11,8 @@ app.use("/tasks",Task)
 
 // app.use(express.static("/Users/mac/Desktop/code/kriscent/fronted/build"))
 // app.use(express.static(path.join(__dirname,'build')))
+app.use(express.static("..//fronted/build"))
 app.get("/", (req,res)=>{
-    app.use(express.static("..//fronted/build"))
     res.sendFile(path.resolve(__dirname,"..//","..//",'fronted','build','index.html'));
 })
 
