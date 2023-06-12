@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "14.x"
+  },
   
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"nodemon src/server/server.js",
-    "build":"npm i"
+    "start":"node src/server/server.js"
+    
   },
   "keywords": [],
   "author": "",
