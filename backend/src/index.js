@@ -10,11 +10,10 @@ app.use("/auth",Admin)
 app.use("/tasks",Task)
 
 // app.use(express.static("/Users/mac/Desktop/code/kriscent/fronted/build"))
-app.use(express.static("..//fronted/build"))
 // app.use(express.static(path.join(__dirname,'build')))
 app.get("/", (req,res)=>{
-    // app.use(express.static("..//fronted/build"))
-    res.sendFile("../fronted/build/index.html");
+    app.use(express.static("..//fronted/build"))
+    res.sendFile(path.resolve(__dirname,"..//","..//",'fronted','build','index.html'));
 })
 
 
